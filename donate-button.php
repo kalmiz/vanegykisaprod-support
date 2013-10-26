@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Paypal button</title>
 	<style>
-		body { font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif; }
+		body { margin: 0; padding:0; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif; }
 	</style>
 </head>
 <body>
@@ -14,7 +14,7 @@ $dir = dirname(__FILE__);
 $button = empty($_REQUEST['btn']) ? 0 : (int)$_REQUEST['btn'];
 $buttonFile = $dir . "/button-$button.html";
 if (!$enabled) { ?>
-	Köszönöm, össze gyűlt a pénz.
+Köszönöm, össze is gyűlt.
 <?php } elseif ($button && is_file($buttonFile)) {
 	readfile($buttonFile);
 } else { ?>
