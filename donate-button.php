@@ -14,7 +14,7 @@ $dir = dirname(__FILE__);
 $button = empty($_REQUEST['btn']) ? 0 : (int)$_REQUEST['btn'];
 $buttonFile = $dir . "/button-$button.html";
 if (!$enabled) { ?>
-Köszönöm, össze is gyűlt.
+<!-- Köszönöm, össze is gyűlt. -->
 <?php } elseif ($button && is_file($buttonFile)) {
 	readfile($buttonFile);
 } else { ?>
